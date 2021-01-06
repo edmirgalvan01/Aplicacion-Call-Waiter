@@ -1,3 +1,5 @@
+//TODO: Este archivo contiene la pantalla de carga de la app
+
 import React, { Component } from "react";
 import { Text, View, Image } from "react-native";
 import * as Animatable from "react-native-animatable";

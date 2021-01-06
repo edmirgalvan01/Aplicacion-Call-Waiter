@@ -1,3 +1,5 @@
+//TODO: Este archivo contiene la pantalla donde el usuario puede iniciar sesión con su correo personal
+
 import React, { Component } from "react";
 import {
   StyleSheet,

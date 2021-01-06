@@ -1,3 +1,5 @@
+//TODO: Este archivo contiene la pantalla donde estan los botones de llamado al mesero
+
 import React from "react";
 import { View, Text, Image, StyleSheet } from "react-native";
 import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";

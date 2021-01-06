@@ -1,3 +1,5 @@
+//TODO: Este archivo contiene la pantalla donde el usuario puede ver su perfil
+
 import React, { Component } from "react";
 import {
   StyleSheet,

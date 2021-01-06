@@ -1,3 +1,5 @@
+//TODO: Este archivo contiene la pantalla donde los usuarios pueden iniciar sesión con FB o google
+
 import React, { Component } from "react";
 import { StyleSheet, View, Text, Image, Dimensions } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
