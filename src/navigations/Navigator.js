@@ -9,7 +9,7 @@ import SplashScreen from "../screens/SplashScreen";
 import LoginScreen from "../screens/LoginScreen";
 import RegisterScreen from "../screens/RegisterScreen";
 import InicioSesionScreen from "../screens/InicioSesionScreen";
-import PruebaMenu from "../screens/pruebaMenu";
+import Home from "../screens/Home";
 import ProfileScreen from "../screens/ProfileScreen";
 
 
@@ -50,8 +50,8 @@ const AppNavigation = createStackNavigator({
       headerShown: false,
     },
   },
-  Prueba: {
-    screen: PruebaMenu,
+  Home: {
+    screen: Home,
     navigationOptions: {
       headerShown: false,
     },

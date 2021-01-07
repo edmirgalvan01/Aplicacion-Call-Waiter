@@ -94,7 +94,7 @@ export default class RegisterScreen extends Component {
           </View>
           <View style={styles.finishContainer}>
             <TouchableOpacity
-              onPress={() => this.props.navigation.navigate("Prueba")}
+              onPress={() => this.props.navigation.navigate("Home")}
             >
               <Text style={styles.finish}>REGISTRARSE</Text>
             </TouchableOpacity>

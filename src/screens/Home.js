@@ -12,7 +12,9 @@ import Product from "../components/Product";
 import * as Animatable from "react-native-animatable";
 import logoVips from "../images/logoVips.png";
 
-export default class PruebaMenu extends React.Component {
+import TapTabNavigator from "../navigations/TapTabNavigator";
+
+export default class Home extends React.Component {
   render() {
     return (
       <ScrollView style={styles.container}>
@@ -85,6 +87,8 @@ export default class PruebaMenu extends React.Component {
             </TouchableOpacity>
           </View>
         </View>
+
+        <TapTabNavigator style={styles.taps} />
       </ScrollView>
     );
   }
@@ -174,5 +178,9 @@ const styles = StyleSheet.create({
     color: "#161924",
     fontSize: 20,
     fontWeight: "500",
+  },
+  taps: {
+    position: "absolute",
+    zIndex: -1,
   },
 });
