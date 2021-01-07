@@ -3,10 +3,10 @@
 import React, { Component } from "react";
 import { Text, View, Image } from "react-native";
 import * as Animatable from "react-native-animatable";
-import { ImageBackgroundStyle } from "@styles/General";
+import { ImageBackgroundStyle } from "../styles/General";
 import { StatusBar } from "expo-status-bar";
 
-export default class LoginScreen extends Component {
+export default class SplashScreen extends Component {
   gotoScreen(routeName) {
     this.props.navigation.navigate(routeName);
   }

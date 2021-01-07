@@ -12,8 +12,6 @@ import InicioSesionScreen from "../screens/InicioSesionScreen";
 import PruebaMenu from "../screens/pruebaMenu";
 import ProfileScreen from "../screens/ProfileScreen";
 
-import Icon from "react-native-vector-icons";
-import { createMaterialBottomTabNavigator } from "react-native-material-bottom-navigation";
 
 const AppNavigation = createStackNavigator({
   Splash: {
