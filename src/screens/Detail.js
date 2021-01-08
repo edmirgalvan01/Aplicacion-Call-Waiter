@@ -127,7 +127,7 @@ const style = StyleSheet.create({
   containerHeader: {
     flexDirection: "row",
     alignItems: "center",
-    marginTop: 40,
+    marginTop: 20,
     marginHorizontal: 20,
     padding: 5,
     marginBottom: 10,

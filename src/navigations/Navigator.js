@@ -61,7 +61,7 @@ const AppNavigation = createStackNavigator({
     navigationOptions: {
       headerShown: false,
     },
-  },
+  }
 });
 
 const screenOptionStyle = {

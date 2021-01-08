@@ -8,10 +8,9 @@ import {
   Image,
   ScrollView,
   SafeAreaView,
+  StatusBar,
 } from "react-native";
-import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native-gesture-handler";
-
 import { FontAwesome5 } from "@expo/vector-icons";
 
 export default class ProfileScreen extends Component {
@@ -19,48 +18,25 @@ export default class ProfileScreen extends Component {
     return (
       <SafeAreaView style={styles.container}>
         <ScrollView showsVerticalScrollIndicator={false}>
-          <View style={{ paddingBottom: 15 }}>
-            <View>
-              <View
-                style={{
-                  height: 50,
-                  width: "100%",
-                  flexDirection: "row",
-                  justifyContent: "space-around",
-                  marginTop: 50,
-                  marginBottom: 0,
-                }}
-              >
-                <TouchableOpacity
-                  onPress={() => this.props.navigation.navigate("Home")}
+          <View
+            style={{
+              padding: 15,
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <View style={styles.containerHeader}>
+              <View style={styles.containerTextMenu}>
+                <View
+                  style={{
+                    flexDirection: "row",
+                  }}
                 >
-                  <FontAwesome5 name="home" size={24} color="black" />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  onPress={() => this.props.navigation.navigate("Detail")}
-                >
-                  <FontAwesome5 name="qrcode" size={24} color="black" />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  onPress={() => this.props.navigation.navigate("Profile")}
-                >
-                  <FontAwesome5 name="user-circle" size={24} color="black" />
-                </TouchableOpacity>
+                  <FontAwesome5 name="user-circle" size={20} color="black" />
+                  <Text style={styles.textMenu}>PERFIL</Text>
+                </View>
               </View>
             </View>
-            {/* <View style={styles.titleBar}>
-              <TouchableOpacity
-                style={{ margin: 5 }}
-                onPress={() => this.props.navigation.goBack()}
-              >
-                <Ionicons
-                  name="ios-arrow-back"
-                  size={30}
-                  color="black"
-                ></Ionicons>
-              </TouchableOpacity>
-            </View> */}
-
             <View style={styles.containerImage}>
               <View style={styles.profileImage}>
                 <Image
@@ -79,13 +55,56 @@ export default class ProfileScreen extends Component {
           <TouchableOpacity style={styles.buttonContainer}>
             <Text style={styles.textButton}>Cerrar sesión</Text>
           </TouchableOpacity>
+
+          <StatusBar barStyle="light-content" hidden={true}></StatusBar>
         </ScrollView>
+
+        <View style={styles.fixedFooter}>
+          <View style={styles.contentFooter}>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate("Home")}
+            >
+              <FontAwesome5 name="home" size={20} color="white" />
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate("Detail")}
+            >
+              <FontAwesome5 name="qrcode" size={20} color="white" />
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate("Profile")}
+            >
+              <FontAwesome5 name="user-circle" size={20} color="white" />
+            </TouchableOpacity>
+          </View>
+        </View>
       </SafeAreaView>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  containerHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 10,
+    marginHorizontal: 20,
+    padding: 5,
+    marginBottom: 10,
+  },
+  icons: {
+    height: 25,
+    width: 20,
+  },
+  containerTextMenu: {
+    width: "80%",
+    alignItems: "center",
+  },
+  textMenu: {
+    paddingHorizontal: 10,
+    fontWeight: "bold",
+    fontSize: 16,
+  },
   container: {
     flex: 1,
     backgroundColor: "#FFF",
@@ -139,5 +158,21 @@ const styles = StyleSheet.create({
   textEmail: {
     fontSize: 20,
     color: "#8C8C8C",
+  },
+  fixedFooter: {
+    backgroundColor: "#000",
+    bottom: 0,
+    left: 0,
+    right: 0,
+    height: 55,
+    flexDirection: "row",
+    width: "100%",
+  },
+  contentFooter: {
+    flexDirection: "row",
+    width: "100%",
+    justifyContent: "space-around",
+    padding: 5,
+    alignItems: "center",
   },
 });
