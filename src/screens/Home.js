@@ -6,19 +6,48 @@ import {
   Text,
   StyleSheet,
   SafeAreaView,
+  StatusBar,
 } from "react-native";
 import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 import Product from "../components/Product";
 import * as Animatable from "react-native-animatable";
 import logoVips from "../images/logoVips.png";
-
-import TapTabNavigator from "../navigations/TapTabNavigator";
+import TabNavigator from "../navigations/ScreenTabNavigator";
+import { FontAwesome5 } from "@expo/vector-icons";
 
 export default class Home extends React.Component {
   render() {
     return (
       <ScrollView style={styles.container}>
-        <View style={styles.containerHeader}>
+        <View>
+          <View
+            style={{
+              height: 50,
+              width: "100%",
+              flexDirection: "row",
+              justifyContent: "space-around",
+              marginTop:50,
+              marginBottom:0
+            }}
+          >
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate("Home")}
+            >
+              <FontAwesome5 name="home" size={24} color="black" />
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate("Detail")}
+            >
+              <FontAwesome5 name="qrcode" size={24} color="black" />
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate("Profile")}
+            >
+              <FontAwesome5 name="user-circle" size={24} color="black" />
+            </TouchableOpacity>
+          </View>
+        </View>
+        {/* <View style={styles.containerHeader}>
           <View style={{ width: "10%" }}></View>
           <View style={styles.containerTextMenu}>
             <View
@@ -29,7 +58,7 @@ export default class Home extends React.Component {
               <Text style={styles.textMenu}>¡BIENVENIDOS!</Text>
             </View>
           </View>
-        </View>
+        </View> */}
 
         {
           <View style={styles.containerLogo}>
@@ -87,8 +116,7 @@ export default class Home extends React.Component {
             </TouchableOpacity>
           </View>
         </View>
-
-        <TapTabNavigator style={styles.taps} />
+        <StatusBar barStyle="light-content"></StatusBar>
       </ScrollView>
     );
   }
@@ -139,17 +167,6 @@ const styles = StyleSheet.create({
     borderColor: "white",
     borderWidth: 15,
   },
-  /*  containerTitleRestaurantes: {
-    alignItems: "center",
-    marginHorizontal: 20,
-    flexDirection: "row",
-    marginTop: 10,
-    marginBottom: 20,
-  },
-  textTitle: {
-    fontSize: 22,
-    fontWeight: "bold",
-  }, */
   image: {
     flex: 1,
     resizeMode: "cover",
@@ -179,7 +196,8 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "500",
   },
-  taps: {
+  containerTabs: {},
+  tabs: {
     position: "absolute",
     zIndex: -1,
   },

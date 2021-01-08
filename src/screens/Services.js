@@ -9,9 +9,7 @@ export default class Services extends React.Component {
     return (
       <View style={styles.container}>
         <ScrollView>
-          <View
-            style={styles.containerHeader}
-          >
+          <View style={styles.containerHeader}>
             <View style={{ width: "10%" }}>
               <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
                 <Image
@@ -45,29 +43,34 @@ export default class Services extends React.Component {
               </View>
             </View>
           </View>
+
           <View style={{ justifyContent: "space-around", margin: 20 }}>
             <TouchableOpacity
               onPress={() => this.props.navigation.navigate("Profile")}
             >
-              <View style={styles.buttons}>
-                <Image
-                  source={require("../images/cubiertos.png")}
-                  style={styles.image}
-                />
-                <View style={styles.containerText}>
-                  <Text style={styles.text}>LLAMAR</Text>
+              <View style={styles.buttons} elevation={7}>
+                <View style={{ justifyContent: "center" }}>
+                  <View style={styles.containerText}>
+                    <Image
+                      source={require("../images/cubiertos.png")}
+                      style={styles.image}
+                    />
+                    <Text style={styles.text}>LLAMAR</Text>
+                  </View>
                 </View>
               </View>
             </TouchableOpacity>
 
             <TouchableOpacity>
-              <View style={styles.buttons}>
-                <Image
-                  source={require("../images/camareros.png")}
-                  style={styles.image}
-                />
-                <View style={styles.containerText}>
-                  <Text style={styles.text}>CUENTA</Text>
+              <View style={styles.buttons} elevation={7}>
+                <View style={{ justifyContent: "center" }}>
+                  <View style={styles.containerText}>
+                    <Image
+                      source={require("../images/camareros.png")}
+                      style={styles.image}
+                    />
+                    <Text style={styles.text}>CUENTA</Text>
+                  </View>
                 </View>
               </View>
             </TouchableOpacity>
@@ -75,13 +78,15 @@ export default class Services extends React.Component {
             <TouchableOpacity
               onPress={() => this.props.navigation.navigate("Detail")}
             >
-              <View style={styles.buttons}>
-                <Image
-                  source={require("../images/cerrar.png")}
-                  style={styles.image}
-                />
-                <View style={styles.containerText}>
-                  <Text style={styles.text}>CANCELAR</Text>
+              <View style={styles.buttons} elevation={7}>
+                <View style={{ justifyContent: "center" }}>
+                  <View style={styles.containerText}>
+                    <Image
+                      source={require("../images/cancelar.png")}
+                      style={styles.image}
+                    />
+                    <Text style={styles.text}>CANCELAR</Text>
+                  </View>
                 </View>
               </View>
             </TouchableOpacity>
@@ -107,25 +112,24 @@ const styles = StyleSheet.create({
   buttons: {
     margin: 50,
     backgroundColor: "#FFE045",
-    padding: 20,
-    borderRadius: 80,
+    borderRadius: 15,
     marginBottom: 15,
     justifyContent: "space-around",
     height: 160,
+    borderWidth: 1.5,
   },
   image: {
     height: 70,
     width: 70,
-    alignSelf: "center",
   },
   containerText: {
-    flexDirection: "row",
+    flexDirection: "column",
     alignItems: "center",
-    marginTop: 30,
+    padding: 10,
   },
   text: {
     fontWeight: "bold",
     fontSize: 20,
-    marginLeft: 75,
+    margin: 10,
   },
 });

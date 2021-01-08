@@ -12,13 +12,43 @@ import {
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
+import { FontAwesome5 } from "@expo/vector-icons";
+
 export default class ProfileScreen extends Component {
   render() {
     return (
       <SafeAreaView style={styles.container}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <View style={{ paddingBottom: 15 }}>
-            <View style={styles.titleBar}>
+            <View>
+              <View
+                style={{
+                  height: 50,
+                  width: "100%",
+                  flexDirection: "row",
+                  justifyContent: "space-around",
+                  marginTop: 50,
+                  marginBottom: 0,
+                }}
+              >
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate("Home")}
+                >
+                  <FontAwesome5 name="home" size={24} color="black" />
+                </TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate("Detail")}
+                >
+                  <FontAwesome5 name="qrcode" size={24} color="black" />
+                </TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate("Profile")}
+                >
+                  <FontAwesome5 name="user-circle" size={24} color="black" />
+                </TouchableOpacity>
+              </View>
+            </View>
+            {/* <View style={styles.titleBar}>
               <TouchableOpacity
                 style={{ margin: 5 }}
                 onPress={() => this.props.navigation.goBack()}
@@ -29,7 +59,7 @@ export default class ProfileScreen extends Component {
                   color="black"
                 ></Ionicons>
               </TouchableOpacity>
-            </View>
+            </View> */}
 
             <View style={styles.containerImage}>
               <View style={styles.profileImage}>

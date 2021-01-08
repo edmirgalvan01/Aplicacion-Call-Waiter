@@ -1,17 +1,10 @@
 //TODO: Este archivo contiene la pantalla donde el usuario puede registrarse
 
 import React, { Component } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  Dimensions,
-} from "react-native";
+import { StyleSheet, Text, View, Image, Dimensions, StatusBar } from "react-native";
 import { TouchableOpacity, TextInput } from "react-native-gesture-handler";
 import * as Animatable from "react-native-animatable";
 
-import main from "../images/main.png";
 import logo from "../images/logoBlackWhite.png";
 import IconGoogle from "../images/googleColor.png";
 import IconFacebook from "../images/facebookColor.png";
@@ -21,7 +14,7 @@ const { width: WIDTH } = Dimensions.get("window");
 export default class RegisterScreen extends Component {
   render() {
     return (
-      <View source={main} style={styles.backgroundContainer}>
+      <View style={styles.backgroundContainer}>
         <View style={styles.logoContainer}>
           <Animatable.Image
             animation="pulse"
@@ -99,6 +92,8 @@ export default class RegisterScreen extends Component {
               <Text style={styles.finish}>REGISTRARSE</Text>
             </TouchableOpacity>
           </View>
+
+          <StatusBar barStyle="light-content"></StatusBar>
         </View>
       </View>
     );

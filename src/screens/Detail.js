@@ -9,19 +9,6 @@ import BottomNavigation, {
 } from "react-native-material-bottom-navigation";
 
 export default class Detail extends React.Component {
-  /* state = {
-    quantity: 1,
-  };
-
-  addQuantity = (quantity) => {
-    this.setState({ quantity: this.state.quantity + 1 });
-  };
-  subtractQuantity = (quantity) => {
-    if (this.state.quantity > 0) {
-      this.setState({ quantity: this.state.quantity - 1 });
-    }
-  }; */
-
   render() {
     return (
       <View style={{ backgroundColor: "#FFF" }}>
@@ -59,7 +46,7 @@ export default class Detail extends React.Component {
             </TouchableOpacity>
           </View>
 
-          <View style={{alignItems:"center"}}>
+          <View style={{ alignItems: "center" }}>
             <View style={style.foodCard}>
               <Image
                 source={require("../images/comida1.jpg")}
@@ -142,8 +129,8 @@ const style = StyleSheet.create({
     alignItems: "center",
     marginTop: 40,
     marginHorizontal: 20,
-    padding:5,
-    marginBottom:10
+    padding: 5,
+    marginBottom: 10,
   },
   icons: {
     height: 25,
@@ -160,20 +147,20 @@ const style = StyleSheet.create({
   },
   foodCard: {
     margin: 50,
-    marginTop:0,
+    marginTop: 0,
     width: "80%",
     padding: 20,
     borderRadius: 30,
     marginBottom: 0,
     justifyContent: "center",
-    alignItems:"center"
+    alignItems: "center",
   },
   foodImage: {
     height: 220,
     width: 330,
     alignSelf: "center",
     resizeMode: "contain",
-    borderRadius:25
+    borderRadius: 25,
   },
   detailContainer: {
     flexDirection: "row",
@@ -182,12 +169,12 @@ const style = StyleSheet.create({
     marginTop: 0,
     borderTopWidth: 1,
     borderBottomWidth: 1,
-    borderTopColor:"black",
-    borderBottomColor:"black",
+    borderTopColor: "black",
+    borderBottomColor: "black",
     backgroundColor: "#FFE045",
-    borderRadius:10,
+    borderRadius: 10,
     width: 330,
-    padding:15
+    padding: 15,
   },
   foodName: {
     fontWeight: "bold",

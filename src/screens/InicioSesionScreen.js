@@ -8,11 +8,11 @@ import {
   ImageBackground,
   Image,
   Dimensions,
+  StatusBar,
 } from "react-native";
 import { TouchableOpacity, TextInput } from "react-native-gesture-handler";
 import * as Animatable from "react-native-animatable";
 
-import main from "../images/main.png";
 import logo from "../images/logoBlackWhite.png";
 import IconGoogle from "../images/googleColor.png";
 import IconFacebook from "../images/facebookColor.png";
@@ -22,7 +22,7 @@ const { width: WIDTH } = Dimensions.get("window");
 export default class InicioSesionScreen extends Component {
   render() {
     return (
-      <View source={main} style={styles.backgroundContainer}>
+      <View style={styles.backgroundContainer}>
         <View style={styles.logoContainer}>
           <Animatable.Image
             animation="pulse"
@@ -79,6 +79,8 @@ export default class InicioSesionScreen extends Component {
             </TouchableOpacity>
           </View>
         </View>
+
+        <StatusBar barStyle="light-content"></StatusBar>
       </View>
     );
   }
