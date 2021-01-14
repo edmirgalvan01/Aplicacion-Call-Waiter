@@ -1,7 +1,14 @@
 //TODO: Este archivo contiene la pantalla donde el usuario puede registrarse
 
 import React, { Component } from "react";
-import { StyleSheet, Text, View, Image, Dimensions, StatusBar } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  Dimensions,
+  StatusBar,
+} from "react-native";
 import { TouchableOpacity, TextInput } from "react-native-gesture-handler";
 import * as Animatable from "react-native-animatable";
 
@@ -23,7 +30,7 @@ export default class RegisterScreen extends Component {
             style={{
               width: 150,
               height: 150,
-              margin: 30,
+              margin: 10,
               resizeMode: "contain",
             }}
             source={logo}
@@ -106,10 +113,11 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
     alignItems: "center",
     backgroundColor: "black",
+    height: "100%",
   },
   logoContainer: {
     alignItems: "center",
-    height: "50%",
+    flex: 0.7,
     width: "100%",
     justifyContent: "center",
   },
@@ -124,7 +132,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   buttonsContainer: {
-    height: "50%",
+    flex: 1.3,
     justifyContent: "center",
   },
   input: {
@@ -161,7 +169,6 @@ const styles = StyleSheet.create({
   finishContainer: {
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 30,
   },
   finish: {
     fontSize: 20,

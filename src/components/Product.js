@@ -12,32 +12,30 @@ export default class Product extends React.Component {
           margin: 10,
           backgroundColor: "white",
           borderRadius: 20,
-          padding: 5,
+          padding: 10,
           backgroundColor: "#FFE045",
+          alignItems: "center",
         }}
       >
         <Image
           source={require("../images/restaurant.jpg")}
-          style={{ height: 180, width: 350, borderRadius: 20 }}
+          style={{ height: 150, width: 240, borderRadius: 20 }}
         />
         <View
           style={{
-            padding: 10,
+            padding: 0,
             justifyContent: "center",
             alignItems: "center",
           }}
         >
-          <Text style={{ fontSize: 33, fontWeight: "bold" }}>
-            {" "}
-            {this.props.title}{" "}
+          <Text style={{ fontSize: 25, fontWeight: "bold" }}>
+            {this.props.title}
           </Text>
-          <Text style={{ fontSize: 20, color: "#020202" }}>
-            {" "}
-            {this.props.filter}{" "}
+          <Text style={{ fontSize: 18, color: "#020202" }}>
+            {this.props.filter}
           </Text>
         </View>
       </View>
     );
   }
 }
-

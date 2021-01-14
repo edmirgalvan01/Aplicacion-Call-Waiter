@@ -67,7 +67,7 @@ export default class ProfileScreen extends Component {
               <FontAwesome5 name="home" size={20} color="white" />
             </TouchableOpacity>
             <TouchableOpacity
-              onPress={() => this.props.navigation.navigate("Detail")}
+              onPress={() => this.props.navigation.navigate("QrScreen")}
             >
               <FontAwesome5 name="qrcode" size={20} color="white" />
             </TouchableOpacity>
@@ -108,6 +108,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#FFF",
+    padding: 0,
+    margin: 0,
   },
   text: {
     color: "#525750",
@@ -139,6 +141,7 @@ const styles = StyleSheet.create({
   infoContainer: {
     alignItems: "center",
     alignSelf: "center",
+    width: "100%",
   },
   buttonContainer: {
     alignSelf: "center",
@@ -154,6 +157,9 @@ const styles = StyleSheet.create({
   textName: {
     fontSize: 35,
     fontWeight: "bold",
+    width: "70%",
+    textAlign: "center",
+    marginBottom: 8,
   },
   textEmail: {
     fontSize: 20,
@@ -176,3 +182,49 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
+
+/* 
+//TODO: Este archivo contiene la pantalla donde el usuario puede ver su perfil
+
+import React, { Component } from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  ScrollView,
+  SafeAreaView,
+  StatusBar,
+  requireNativeComponent,
+} from "react-native";
+import { FontAwesome5 } from "@expo/vector-icons";
+import logo from "../images/logoo.png";
+
+export default class ProfileScreen extends Component {
+  render() {
+    return (
+      <View style={{ flex: 1, backgroundColor: "red" }}>
+        <View
+          style={{
+            flex: 0.3,
+            backgroundColor: "orange",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <FontAwesome5 name="user-circle" size={20} color="black" />
+          <Text style={{ marginLeft: 15, fontSize: 20 }}>Perfil</Text>
+        </View>
+        <View style={{ flex: 2, backgroundColor: "blue" }}>
+          <Image souce={logo} style={{ height: 250, width: 250 }} />
+        </View>
+
+        <View style={{ flex: 1, backgroundColor: "red" }}></View>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({});
+ */

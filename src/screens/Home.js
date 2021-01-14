@@ -6,28 +6,49 @@ import * as Animatable from "react-native-animatable";
 import logoVips from "../images/logoVips.png";
 import { FontAwesome5 } from "@expo/vector-icons";
 
-export default class BibleViewer extends Component {
+export default class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <ScrollView>
-          <View style={styles.containerHeader}>
-            <Text style={{ fontWeight: "bold", fontSize: 21 }}>
-              ¡BIENVENIDOS!
-            </Text>
+        <ScrollView contentContainerStyle={{}}>
+          <View
+            style={{
+              flex: 0.8,
+              justifyContent: "center",
+              alignItems: "center",
+              height: 60,
+            }}
+          >
+            <View>
+              <Text style={{ fontSize: 22, fontWeight: "bold" }}>
+                ¡BIENVENIDOS!
+              </Text>
+            </View>
           </View>
-          <View style={styles.containerLogo}>
-            <Animatable.Image
-              animation="pulse"
-              easing="ease-out"
-              iterationCount="infinite"
-              style={styles.animateLogo}
-              source={require("../images/logoBlackWhite.png")}
-            />
+          <View
+            style={{
+              backgroundColor: "black",
+              flex: 2.1,
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <View style={{ height: 130, justifyContent: "center" }}>
+              <Animatable.Image
+                animation="pulse"
+                easing="ease-out"
+                iterationCount="infinite"
+                style={{
+                  width: 80,
+                  height: 80,
+                  resizeMode: "contain",
+                }}
+                source={require("../images/logoBlackWhite.png")}
+              />
+            </View>
           </View>
-
-          <View style={styles.containerRestaurantes}>
-            <View style={styles.cards}>
+          <View style={{ flex: 9, alignItems: "center" }}>
+            <View style={{ width: "85%" }}>
               <TouchableOpacity
                 onPress={() => this.props.navigation.navigate("Detail")}
               >
@@ -65,18 +86,34 @@ export default class BibleViewer extends Component {
               </TouchableOpacity>
             </View>
           </View>
-          <StatusBar barStyle="light-content" hidden={true}></StatusBar>
         </ScrollView>
 
-        <View style={styles.fixedFooter}>
-          <View style={styles.contentFooter}>
+        <View
+          style={{
+            backgroundColor: "#000",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            height: 55,
+            flexDirection: "row",
+          }}
+        >
+          <View
+            style={{
+              flexDirection: "row",
+              width: "100%",
+              justifyContent: "space-around",
+              padding: 5,
+              alignItems: "center",
+            }}
+          >
             <TouchableOpacity
               onPress={() => this.props.navigation.navigate("Home")}
             >
               <FontAwesome5 name="home" size={20} color="white" />
             </TouchableOpacity>
             <TouchableOpacity
-              onPress={() => this.props.navigation.navigate("Detail")}
+              onPress={() => this.props.navigation.navigate("QrScreen")}
             >
               <FontAwesome5 name="qrcode" size={20} color="white" />
             </TouchableOpacity>
@@ -95,79 +132,6 @@ export default class BibleViewer extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white",
-  },
-  scrollView: {
     padding: 0,
-  },
-  text: {
-    marginBottom: 60,
-  },
-  containerHeader: {
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 20,
-    marginBottom: 20,
-    marginHorizontal: 20,
-    padding: 5,
-  },
-  containerTextMenu: {
-    width: "80%",
-    alignItems: "center",
-  },
-  textMenu: {
-    paddingHorizontal: 10,
-    fontWeight: "bold",
-    fontSize: 16,
-  },
-  containerLogo: {
-    backgroundColor: "black",
-  },
-  animateLogo: {
-    width: 100,
-    height: 100,
-    margin: 30,
-    alignSelf: "center",
-    resizeMode: "contain",
-  },
-  containerRestaurantes: {
-    borderColor: "white",
-    borderWidth: 15,
-  },
-  image: {
-    flex: 1,
-    resizeMode: "cover",
-    justifyContent: "center",
-  },
-  text: {
-    color: "white",
-    fontSize: 42,
-    fontWeight: "bold",
-    textAlign: "center",
-    backgroundColor: "#000000a0",
-  },
-  restaurantCard: {
-    flexDirection: "row",
-    marginTop: 30,
-    marginBottom: 20,
-  },
-  cards: {
-    alignItems: "center",
-  },
-  fixedFooter: {
-    backgroundColor: "#000",
-    bottom: 0,
-    left: 0,
-    right: 0,
-    height: 55,
-    flexDirection: "row",
-    width: "100%",
-  },
-  contentFooter: {
-    flexDirection: "row",
-    width: "100%",
-    justifyContent: "space-around",
-    padding: 5,
-    alignItems: "center",
   },
 });
