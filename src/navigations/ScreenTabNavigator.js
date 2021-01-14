@@ -1,5 +1,4 @@
 import React from "react";
-import TouchableOpacity from "react-native";
 import { createAppContainer } from "react-navigation";
 import { createBottomTabNavigator } from "react-navigation-tabs";
 import { FontAwesome5 } from "@expo/vector-icons";

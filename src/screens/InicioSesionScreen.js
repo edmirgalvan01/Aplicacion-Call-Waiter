@@ -5,7 +5,6 @@ import {
   StyleSheet,
   Text,
   View,
-  ImageBackground,
   Image,
   Dimensions,
   StatusBar,

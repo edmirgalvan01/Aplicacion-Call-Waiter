@@ -1,7 +1,7 @@
 //TODO: Este archivo contiene el producto individual que se muestra en el home
 
 import React from "react";
-import { View, Image, Text, StyleSheet } from "react-native";
+import { View, Image, Text } from "react-native";
 
 export default class Product extends React.Component {
   render() {

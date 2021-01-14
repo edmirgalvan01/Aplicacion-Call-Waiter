@@ -11,7 +11,7 @@ import RegisterScreen from "../screens/RegisterScreen";
 import InicioSesionScreen from "../screens/InicioSesionScreen";
 import Home from "../screens/Home";
 import ProfileScreen from "../screens/ProfileScreen";
-import QrScreen from '../screens/QrScreen'
+import QrScreen from "../screens/QrScreen";
 
 const AppNavigation = createStackNavigator({
   Splash: {
@@ -67,7 +67,7 @@ const AppNavigation = createStackNavigator({
     navigationOptions: {
       headerShown: false,
     },
-  }
+  },
 });
 
 const screenOptionStyle = {
